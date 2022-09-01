@@ -11,18 +11,18 @@ pygame.init()
 screen = pygame.display.set_mode((700, 600))
 
 # background image
-background=pygame.image.load("9TYRVJ.jpg")
+background=pygame.image.load("game_image/9TYRVJ.jpg")
 
 # background Sound
-mixer.music.load("background.wav")
+mixer.music.load("game_audio/background.wav")
 mixer.music.play()
 # caption and logo
 pygame.display.set_caption("Space Invaders")
-icon = pygame.image.load("space-ship.png")
+icon = pygame.image.load("game_image/space-ship.png")
 pygame.display.set_icon(icon)
 
 # player
-playerImg = pygame.image.load("arcade-game.png")
+playerImg = pygame.image.load("game_image/arcade-game.png")
 playerX = 320
 playerY = 480
 playerX_change = 0
@@ -37,14 +37,14 @@ enemyY_change = []
 num_of_enemies = 6
 
 for i in range(num_of_enemies):
-    enemyImg.append(pygame.image.load("meteorite.png"))
+    enemyImg.append(pygame.image.load("game_image/meteorite.png"))
     enemyX.append(random.randint(0, 635))
     enemyY.append(random.randint(50, 150))
     enemyX_change.append(0.3)
     enemyY_change.append(40)
 
 # creating bullet for firing
-bulletImg = pygame.image.load("bullet.png")
+bulletImg = pygame.image.load("game_image/bullet.png")
 bulletX = 0
 bulletY = 480
 bulletX_change = 0
@@ -102,7 +102,7 @@ while running:
             if event.key == pygame.K_DOWN:
                 playerY_change = 1.5
             if event.key == pygame.K_SPACE:
-                bullet_sound = mixer.Sound("laser.wav")
+                bullet_sound = mixer.Sound("game_audio/laser.wav")
                 bullet_sound.play()
                 if bullet_state is "ready":
                     bulletX = playerX
@@ -155,7 +155,7 @@ while running:
         # collision
         collision = iscollision(enemyX[i], enemyY[i], bulletX, bulletY)
         if collision:
-            explosion_sound = mixer.Sound("explosion.wav")
+            explosion_sound = mixer.Sound("game_audio/explosion.wav")
             explosion_sound.play()
             bulletY = 480
             bullet_state = "ready"
