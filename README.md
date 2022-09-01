@@ -9,10 +9,10 @@
 ## 👍 Recommended For Python Beginner 
  
 ## 🎮 Game Preview 
-<img src="../python_game/readme_media/Annotation%202022-09-01%20203854.png">
+<img src="./readme_media/Annotation%202022-09-01%20203854.png">
 <br>
 <br>
-<img src=".//readme_media/Annotation%202022-09-01%20204531.png">
+<img src="./readme_media/Annotation%202022-09-01%20204531.png">
 
 ## 🎲 How To Play 
 - download the repo as zip or fork it and clone it in local machine
